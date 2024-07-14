@@ -1,0 +1,105 @@
+.etap__title-wrapper > h2 {
+    @include textStyle($FS:48px, $FW:600, $LH:60px, $CLR:$title-clr, $mb:40px);
+}
+.etap__list {
+    max-width: 1183px;
+    margin: 0 auto;
+    flex-direction: column;
+    @include display($AI:center, $JC:start, $gap:24px);
+
+}
+.etap__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-right: 50px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    @include display($AI:start, $JC:start, $gap:56px);
+    
+}
+.etap__item-img {
+    margin-left: 96px;
+}
+.etap__text-wrapper {
+    max-width: 568px;
+}
+.etap__subtitle {
+    @include textStyle($FS:20px, $FW:600, $LH:25px, $CLR:$title-clr, $mb:48px);
+    position: relative;
+    &::before{
+        content: "";
+        width: 96px;
+        height: 3px;
+        display: inline-block;
+        position: absolute;
+        background-color: #FFCE50;
+        top: 42px;
+        bottom: 0;
+        margin: auto 0;
+    }
+}
+.etap__subtext {
+    @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$text-clr, $mb:0px);
+    
+}
+
+.etap__video{
+    max-width: 100%;
+    height: 667px;
+    margin-top: 62px;
+}
+
+// Tablet start
+@media(max-width:1030px){
+    .etap__title-wrapper{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    .etap__title-wrapper > h2 {
+        @include textStyle($FS:44px, $FW:600, $LH:55px, $CLR:$title-clr, $mb:40px);
+    }
+    .etap__list {
+        max-width: 720px;
+        @include display($AI:center, $JC:start, $gap:16px);
+    }
+    .etap__item {
+        padding-top: 40px;
+        padding-bottom: 48px;
+        padding-left: 85px;
+        flex-direction: column;
+        @include display($AI:start, $JC:start, $gap:0px); 
+    }
+    .etap__item-img {
+        display: none;
+    }
+    .etap__text-wrapper {
+        max-width: 531px;
+    }
+    .etap__video-wrapper{
+        width: 675px;
+        height: 405px;
+        margin: 0 auto;
+        margin-top: 125px;
+    }
+    .etap__video{
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+}
+
+// Mobile start
+@media(max-width:700px){
+    .etap__title-wrapper, .etap__list{
+        display: none;
+    }
+    .etap__video-wrapper{
+        max-width: 327px;
+        height: 196px;
+        margin-top: 0px;
+    }
+    .etap__video{
+        width: 100%;
+    }
+}

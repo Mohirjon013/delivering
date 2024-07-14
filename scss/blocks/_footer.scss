@@ -1,0 +1,158 @@
+
+.site-footer {
+    margin-top: 166px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    background-color: #0B7572;
+}
+.footer {
+    @include display($AI:start, $JC:space-between, $gap:10px);
+}
+.footer__logo-img {
+    display: inline-block;
+}
+.footer__list {
+    @include display($AI:start, $JC:space-between, $gap:97px);
+    max-width: 350px;
+    margin-top: 21px;
+}
+.footer__item { 
+    flex-direction: column;
+    @include display($AI:start, $JC:start, $gap:25px);
+}
+.footer__strong {
+    @include textStyle($FS:13px, $FW:600, $LH:19.5px, $CLR:$white-clr, $mb:0px);
+    font-family: 'Exo 2';
+    letter-spacing: 2px;
+}
+.footer__link {
+    display: block;
+    @include textStyle($FS:13px, $FW:500, $LH:19.5px, $CLR:$white-clr, $mb:0px);
+    font-family: 'Exo 2';
+    letter-spacing: 2px;
+}
+.footer-contant-wrapper {
+    flex-direction: column;
+    @include display($AI:start, $JC:start, $gap:32px);
+}
+.footer__social-contant {
+    @include display($AI:start, $JC:start, $gap:14px);
+}
+.footer__social-link{
+    color: $white-clr;
+    transition: 0.3s all linear;
+    &:hover{
+        color: #FF9619;
+    }
+}
+.footer__number-link {
+    display: block;
+    font-family: 'Exo 2';
+    transition: 0.3s all linear;
+    @include textStyle($FS:13px, $FW:500, $LH:19.5px, $CLR:$white-clr, $mb:0px);
+
+    &:hover{
+        color: #FF9619;
+    }
+}
+.footer__contant-link {
+    @include BtnStyle($W:271px, $PY:8px, $BtnBG:#FF9619, $BtnBorderCLR:#FF9619, $HoverBG:transparent, $HoverCLR:#FF9619, $HoverBorderCLR:#FF9619, $BtnFS:13px, $BtnFW:600, $BtnLH:19.5px, $BtnCLR:$white-clr, $Btnmb:0px);
+    max-width: 271px;
+}
+.footer__subtext{
+    margin-top: 80px;
+    font-family: 'Exo 2';
+    text-align: center;
+    @include textStyle($FS:12px, $FW:500, $LH:18px, $CLR:$white-clr, $mb:0px);
+    letter-spacing: 3px;
+}
+
+// Tablet start
+@media(max-width:950px){
+    .site-footer {
+        margin-top: 126px;
+        padding-top: 41px;
+        padding-bottom: 21px;
+    }
+    .footer__logo-img > img {
+        width: 93px;
+        height: 46px;
+    }
+    .footer__list {
+        @include display($AI:start, $JC:space-between, $gap:74px);
+        max-width: 266px;
+        margin-top: 10px;
+    }
+    .footer__strong {
+        @include textStyle($FS:8px, $FW:600, $LH:12px, $CLR:$white-clr, $mb:0px);
+    }
+    .footer__link {
+        @include textStyle($FS:8px, $FW:600, $LH:12px, $CLR:$white-clr, $mb:0px);
+    }
+    .footer__social-contant {
+        @include display($AI:start, $JC:start, $gap:7px);
+    }
+    .footer__number-link {
+        display: block;
+        font-family: 'Exo 2';
+        transition: 0.3s all linear;
+        @include textStyle($FS:8px, $FW:500, $LH:12px, $CLR:$white-clr, $mb:0px);
+
+        &:hover{
+            color: #FF9619;
+        }
+    }
+    .footer__contant-link {
+        @include BtnStyle($W:143px, $PY:4px, $BtnBG:#FF9619, $BtnBorderCLR:#FF9619, $HoverBG:transparent, $HoverCLR:#FF9619, $HoverBorderCLR:#FF9619, $BtnFS:6px, $BtnFW:600, $BtnLH:9px, $BtnCLR:$white-clr, $Btnmb:0px);
+    }
+    .footer__subtext{
+        margin-top: 35px;
+        @include textStyle($FS:10px, $FW:500, $LH:15px, $CLR:$white-clr, $mb:0px);
+    }
+}
+// Mobile start
+@media(max-width:720px){
+    .site-footer {
+        margin-top: 25px;
+        padding-top: 14px;
+        padding-bottom: 20px;
+    }
+    .footer {
+        max-width: 300px;
+        margin: 0 auto;
+        flex-direction: column;
+        @include display($AI:start, $JC:start, $gap:0px);
+    }
+    .footer__logo-img > img {
+        width: 61px;
+        height: 33px;
+    }
+    .footer__list {
+        @include display($AI:start, $JC:space-between, $gap:60px);
+        max-width: 250px;
+        margin-top: 23px;
+    }
+    .footer__item { 
+        @include display($AI:start, $JC:start, $gap:26px);
+    }
+    .footer-contant-wrapper {
+        margin-top: 17px;
+    }
+    .footer__social-contant {
+        @include display($AI:start, $JC:start, $gap:7px);
+    }
+    .footer__number-link {
+        margin-top: 63px;
+    }
+    .footer__contant-link {
+        @include BtnStyle($W:293px, $PY:8px, $BtnBG:#FF9619, $BtnBorderCLR:#FF9619, $HoverBG:transparent, $HoverCLR:#FF9619, $HoverBorderCLR:#FF9619, $BtnFS:10px, $BtnFW:600, $BtnLH:15px, $BtnCLR:$white-clr, $Btnmb:0px);
+    }
+    .footer__subtext{
+        margin-top: 15px;
+        @include textStyle($FS:10px, $FW:500, $LH:15px, $CLR:$white-clr, $mb:0px);
+    }
+    .footer__text-wrapper{
+        max-width: 180px;
+        margin: 0 auto;
+    }
+}

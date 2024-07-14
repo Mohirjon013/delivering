@@ -1,0 +1,112 @@
+.profitable-section {
+    padding-bottom: 120px;
+}
+.profitable__contant-wrapper {
+    height: 453px;
+    padding: 178px 0 166px;
+    margin-bottom: 72px;
+    background-image: url(../../images/profitable-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 453px;
+    background-position: cover;
+    z-index: -8;
+    position: relative;
+    &::before{
+        content: "";
+        width: 769px;
+        height: 453px;
+        position: absolute;
+        display: inline-block;
+        background-image: url(../../images/bg-img.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        top: 0;
+        bottom: 0;
+        z-index: -2;
+    }
+}
+.profitable__title-wrapper{
+    max-width: 410px;
+}
+.profitable__title{
+    @include textStyle($FS:48px, $FW:600, $LH:60px, $CLR:$white-clr, $mb:0px);
+    margin-left: 90px;
+    z-index: 6;
+}
+.profitable__list {
+    max-width: 1034px;
+    margin: 0 auto;
+    @include display($AI:center, $JC:space-between, $gap:0px);
+    flex-wrap: wrap;
+    row-gap: 64px;
+}
+.profitable__item {
+    max-width: 447px;
+    @include display($AI:center, $JC:space-between, $gap:40px);
+}
+.profitable__item-contant {
+    width: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #E9E9EC;
+}
+.profitable__text-item  > h2{
+    @include textStyle($FS:20px, $FW:600, $LH:27px, $CLR:$title-clr, $mb:16px);   
+}
+.profitable__text-item  > p{
+    @include textStyle($FS:16px, $FW:600, $LH:24px, $CLR:$text-clr, $mb:0px);   
+}
+
+// Tablet start
+@media (max-width:1020px){
+    .profitable-section {
+        padding-bottom: 100px;
+    }
+    .profitable__contant-wrapper {
+        max-width: 729px;
+        height: 383px;
+        margin: 0 auto;
+        padding: 112px 0 106px;
+        margin-bottom: 48px;
+        background-image: url(../images/profitable-table-bg.png);
+        background-size: 100% 383px;
+        background-position: contain;
+        &::before{
+            content: "";
+            width: 600px;
+            height: 383px;
+            position: absolute;
+            display: inline-block;
+            background-image: url(../../images/tablet-bg-img.png);
+            background-position: left;
+            top: 0;
+            bottom: 0;
+            z-index: -2;
+        }
+    }
+    .profitable__title-wrapper{
+        max-width: 288px;
+    }
+    .profitable__title{
+        @include textStyle($FS:44px, $FW:600, $LH:55px, $CLR:$white-clr, $mb:0px);
+    }
+    .profitable__list {
+        max-width: 537px;
+        @include display($AI:center, $JC:start, $gap:49px);
+        flex-direction: column;
+    }
+    .profitable__item {
+        max-width: 100%;
+        @include display($AI:center, $JC:space-between, $gap:40px);
+    }
+
+}
+// Mobile start
+@media (max-width:715px){
+    .profitable-section {
+        display: none;
+    }
+}
